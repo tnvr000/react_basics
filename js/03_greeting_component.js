@@ -5,8 +5,7 @@ window.onload = function() {
 		let element = React.createElement('h1', {
 			children: `Hi, ${prop.name}`,
 			key: prop.name
-		})
-		element.key = "tat"
+		});
 		return element
 	}
 
@@ -22,7 +21,6 @@ window.onload = function() {
 			}
 		)
 	}
-	const element = React.constructor(App())
-	console.log(element)
-	ReactDOM.render(element, target)
+	ReactDOM.render(App(), target)
 }
+var element
