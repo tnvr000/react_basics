@@ -1,26 +1,26 @@
+"use strict"
 window.onload = function() {
-	target = document.getElementById('greeting')
+	const rootContainer = document.getElementById('greeting')
 
-	function Welcome(prop) {
-		let element = React.createElement('h1', {
-			children: `Hi, ${prop.name}`,
-			key: prop.name
-		});
+	function Welcome(props) {
+		let element = React.createElement('h1', 
+			{
+				key: props.name
+			},
+			`Hi ${props.name}`
+		);
 		return element
 	}
 
 	function App() {
-		return React.createElement(
-			'div', {
-				children: [
-					Welcome({name: "Tarannum"}),
-					Welcome({name: "Tanveer"}),
-					Welcome({name: "Tahir"})
-				],
+		return React.createElement('div', 
+			{
 				key: "1"
-			}
-		)
+			},
+			Welcome({name: 'Tarannum'}),
+			Welcome({name: 'Tanveer'}),
+			Welcome({name: 'Tahir'})
+		);
 	}
-	ReactDOM.render(App(), target)
+	ReactDOM.render(App(), rootContainer)
 }
-var element

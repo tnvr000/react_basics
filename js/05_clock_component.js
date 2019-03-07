@@ -1,9 +1,10 @@
+'use strict'
 window.onload = function() {
 	function tick() {
-		element = React.createElement(Clock)
+		const element = React.createElement(Clock)
 		ReactDOM.render(element, document.getElementById('root'))
 	}
-	tick()
+	tick();
 }
 var element
 class Clock extends React.Component {
@@ -21,14 +22,12 @@ class Clock extends React.Component {
 	}
 
 	tick() {
-		let date = new Date();
-		this.setState({date: date});
+		this.setState({date: new Date()});
 	}
 
 	render() {
 		return (
-			React.createElement(
-				'div',
+			React.createElement('div',
 				{
 					key: 'time',
 					className: 'clock'
@@ -37,4 +36,5 @@ class Clock extends React.Component {
 			)
 		)
 	}
+	
 }

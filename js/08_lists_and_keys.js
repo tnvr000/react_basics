@@ -8,8 +8,7 @@ window.onload = function() {
 function NumberList(props) {
 	const numbers = props.numbers;
 	const listItems = numbers.map((number)=>{
-		return React.createElement(
-			'li',
+		return React.createElement('li',
 			{
 				key: number.toString()
 			},

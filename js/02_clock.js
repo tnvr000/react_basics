@@ -1,7 +1,8 @@
+"use strict"
 window.onload = function() {
-	clockContainer = document.getElementById('clock')
+	const clockContainer = document.getElementById('clock')
 	const tick = function() {
-		element = React.createElement('span', {children: new Date().toLocaleTimeString()})
+		const element = React.createElement('span', null, new Date().toLocaleTimeString())
 		ReactDOM.render(element, clockContainer)
 	}
 	

@@ -1,69 +1,56 @@
-var greetingContainer
+'use strict'
 window.onload = function() {
-	buttonContainer = document.getElementById('buttonContainer')
-	greetingContainer = document.getElementById('greetingContainer')
+	const buttonContainer = document.getElementById('buttonContainer')
+	const greetingContainer = document.getElementById('greetingContainer')
 
-	// ReactDOM.render(Greeting({isLoggedIn: false}), greetingContainer)
-	element = React.createElement(LoginControl)
+	const element = React.createElement(LoginControl)
 	ReactDOM.render(element, buttonContainer)
 }
 
 function UserGreeting(props) {
-	return (
-		React.createElement(
-			'h1',
-			{
-				key: 'user_greeting',
-				id: 'greeting',
-				className: 'greeting'
-			},
-			'Welcome Back'
-		)
-	);
+	return (React.createElement('h1',
+		{
+			key: 'user_greeting',
+			id: 'greeting',
+			className: 'greeting'
+		},
+		'Welcome Back'
+	));
 }
 
 function GuestGreeting(props) {
-	return (
-		React.createElement(
-			'h1',
-			{
-				key: 'guest_greeting',
-				id: 'greeting',
-				className: 'greeting'
-			},
-			'Please Login First'
-		)
-	);
+	return (React.createElement('h1',
+		{
+			key: 'guest_greeting',
+			id: 'greeting',
+			className: 'greeting'
+		},
+		'Please Login First'
+	));
 }
 
 function LoginButton(props) {
-	return (
-		React.createElement(
-			'button',
-			{
-				key: 'button',
-				id: 'logButton',
-				className: 'button',
-				onClick: props.onClick
-			},
-			'Login'
-		)
-	);
+	return (React.createElement('button',
+		{
+			key: 'button',
+			id: 'logButton',
+			className: 'button',
+			onClick: props.onClick
+		},
+		'Login'
+	));
 }
 
 function LogoutButton(props) {
-	return (
-		React.createElement(
-			'button',
-			{
-				key: 'button',
-				id: 'logButton',
-				class_name: 'button',
-				onClick: props.onClick
-			},
-			'Logout'
-		)
-	);
+	return (React.createElement('button',
+		{
+			key: 'button',
+			id: 'logButton',
+			class_name: 'button',
+			onClick: props.onClick
+		},
+		'Logout'
+	));
 }
 
 function Greeting(props) {

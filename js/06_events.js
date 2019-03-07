@@ -1,7 +1,7 @@
-var element
+'use strict'
 window.onload = function() {
-	let domContainer = document.getElementById('root')
-	element = React.createElement(Toggle)
+	const domContainer = document.getElementById('root')
+	const element = React.createElement(Toggle)
 	ReactDOM.render(element, domContainer)
 }
 
@@ -14,13 +14,11 @@ class Toggle extends React.Component {
 
 	handleClick() {
 		this.setState(state=>({isToggleOn: !state.isToggleOn}));
-		console.log(btnToggle)
 	}
 
 	render() {
 		return (
-			React.createElement(
-				'button',
+			React.createElement('button',
 				{
 					key: 'btn_toggle',
 					id: 'btnToggle',
